@@ -1,6 +1,6 @@
 {
   "name": "use-single-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React hook for using a unified state, with optional state diff logging",
   "main": "dist/index.js",
   "types":"dist/index.d.ts",
