@@ -7,7 +7,7 @@
   "scripts": {
     "build":"rimraf dist && tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "deploy":"tsc && npm deploy",
+    "deploy":"npm run build && npm publish",
     "link":"npm link",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
