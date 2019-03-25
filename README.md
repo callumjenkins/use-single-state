@@ -34,8 +34,6 @@ update({
 });
 ```
 
-### Example log:
-
 ## Resetting state
 
 - You can reset the whole state back to its initial value with the `reset` function.
@@ -113,7 +111,7 @@ const [text, setText] = useState('');
 const [value, setValue] = useState(0);
 const [note, setNote] = useState('');
 
-setNote('Updated text');
+setNote('New note');
 setText('Updated text');
 setValue(9);
 
