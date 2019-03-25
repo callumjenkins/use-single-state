@@ -1,0 +1,6 @@
+#.prettierrc
+printWidth: 80
+useTabs: true
+singleQuote: true
+trailingComma: "none"
+jsxBracketSameLine: true

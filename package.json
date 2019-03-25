@@ -1,0 +1,26 @@
+{
+  "name": "use-single-state",
+  "version": "1.0.0",
+  "description": "A React hook for using a unified state, with optional state diff logging",
+  "main": "dist/index.js",
+  "types":"dist/index.d.ts",
+  "scripts": {
+    "build":"tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "deploy":"tsc && npm deploy",
+    "link":"npm link",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["react","hooks","react-hooks","typescript"],
+  "author": "Callum Jenkins",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react":"^16.8.8",
+    "prettier":"^1.16.4",
+    "typescript":"^3.3.4000"
+  },
+  "dependencies": {
+		"deep-diff": "^1.0.2",
+    "react":"^16.8.5"
+  }
+}
