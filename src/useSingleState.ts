@@ -12,11 +12,35 @@ type UseSingleState<T> = [
 ];
 
 /**
- * Use a single state. Returns a tuple with [state, update, reset, replace].
+ * Use a single state. Returns a tuple with `[state, update, reset, replace]`. Set `label` to log a diff of state changes, and force logging on or off with `enableLog`.
  * 
- * Set a topic to enable logging of state changes.
+ * Basic usage:
+ * 	
+ * 	const [state, update, reset, replace] = useSingleState({note: '', value: 0} [, label, enableLog]);
+ * 
+ * - `state` is your current state object
+ * - `update(object)` takes an update object, and creates your next state by merging it with your current state
+ * - `reset()` resets your state to its initial value
+ * - `replace(object)` takes a replacement object, which becomes your next state
+ * 
+ * Examples:
+ * 
+```typescript
+const { note, value } = state;
+update({
+	note: 'New note'
+});
+// Update is now { text: '', value: 0, note: '' }
+
+reset();
+// State is now { text: '', value: 0, note: '' }
+
+replace({
+	value: 4
+})
+```
  * @param initialState Initialises the state
- * @param context (Optional) The component's context, required for logging. Pass the 'this' keyword. Defaults to empty.
+ * @param label (Optional) A label for the component
  * @param enableLog (Optional) Enable logging. Defaults to true.
  */
 const useSingleState = <T extends object>(

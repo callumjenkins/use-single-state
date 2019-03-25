@@ -23,7 +23,7 @@ yarn add use-single-state
 ```typescript
 import useSingleState from 'use-single-state';
 
-const [{ text, value }, update] = useSingleState({
+const [{ text, value, note }, update] = useSingleState({
 	text: '',
 	value: 0,
 	note: ''
